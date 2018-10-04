@@ -1,0 +1,5 @@
+2018-10-04 13:23:19,978 INFO com.log.loggerExample [main] Info Message
+2018-10-04 13:23:20,004 DEBUG com.log.loggerExample [main] Debug Message
+2018-10-04 13:23:20,006 ERROR com.log.loggerExample [main] Error Message
+2018-10-04 13:23:20,008 WARN com.log.loggerExample [main] Warn Message
+2018-10-04 13:23:20,009 FATAL com.log.loggerExample [main] Fatal Message

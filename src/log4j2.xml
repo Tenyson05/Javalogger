@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration monitorinterval="30" status="info" strict="true">
+    <Properties>
+        <property name="loggerExamplelocation">.logs/today.log</property>
+    </Properties>
+   
+    <Appenders>
+        <!-- General Appenders -->
+        <Appender type = "console" name="LoggerConsoleAppender">
+        	<Layout type="PatternLayout" pattern="%d %p [%t] %m%n"></Layout>
+        </Appender>
+        <appender type = "File"
+        	name="LoggerFileAppender"
+        	fileName="${loggerExamplelocation}">
+        	<Layout type="PatternLayout" pattern="%d %p [%t] %m%n" />
+        </appender>
+        <!-- /General Appenders -->
+        <!-- MainSample Specific Appenders -->
+        <!-- /MainSample Appenders -->
+    </Appenders>
+    <Loggers>
+        <Root level="debug">
+            <AppenderRef ref="LoggerConsoleAppender" />
+            <AppenderRef ref="LoggerFileAppender" />
+        </Root>
+
+        <Logger name="com.log.loggerExample" level="debug">
+        	<AppenderRef ref="LoggerConsoleAppender" />
+        	<AppenderRef ref="LoggerFileAppender" />
+        </Logger>
+        
+    </Loggers>
+</Configuration>
